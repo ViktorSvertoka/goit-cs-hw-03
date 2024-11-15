@@ -34,8 +34,6 @@ def add_sample_cats():
 
 
 # Операції CRUD
-
-
 def get_all_cats():
     """Функція для виведення всіх котів з колекції."""
     try:
@@ -114,7 +112,7 @@ if __name__ == "__main__":
     add_sample_cats()
 
     # Тестування операцій
-    print(Fore.BLUE + "Отримання всіх котів:")
+    print(Fore.MAGENTA + "Отримання всіх котів:")
     get_all_cats()
 
     print(Fore.BLUE + "\nОтримання кота за ім'ям 'Barsik':")
@@ -125,6 +123,9 @@ if __name__ == "__main__":
 
     print(Fore.BLUE + "\nДодавання характеристики до кота 'Barsik':")
     add_feature_to_cat("Barsik", "любить лазити по деревах")
+
+    print(Fore.BLUE + "\nОтримання оновлених даних кота 'Barsik':")
+    get_cat_by_name("Barsik")
 
     print(Fore.BLUE + "\nВидалення кота 'Barsik':")
     delete_cat_by_name("Barsik")
